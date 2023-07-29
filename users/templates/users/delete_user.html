@@ -1,0 +1,11 @@
+{% load static %}
+
+{% block content %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <p>are you sure ? u want to delete this <b>{{context.user.f_name}} {{context.user.l_name}}</b></p>
+    <button>Delete</button>
+    <a href="{% url 'home'%}">cancel</a>
+</form>
+{% endblock %}

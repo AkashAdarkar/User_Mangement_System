@@ -1,0 +1,14 @@
+{% extends 'users/index.html'%}
+{% load static %}
+
+
+{% block content %}
+
+<form action="" method="POST">
+    {%csrf_token%}
+    {{context.form.as_p}}
+    <button>Update</button>
+    <a href="{% url 'home'%}">cancel</a>
+</form>
+
+{% endblock %}
